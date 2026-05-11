@@ -1,15 +1,28 @@
-# Laplace---HUQ
- A heteroscedastic uncertainty quantification model based on the zero-mean Laplace distribution to deliver spatially adaptive confidence intervals for gravity-geologic method (GGM) derived bathymetry.
-# Code Documentation: Marine Terrain Data Processing and Uncertainty Quantification
-This codebase provides a set of modular tools for processing marine terrain data (e.g., abyssal plains, seamounts, trenches), supporting data loading, gravity‑geologic method (GGM) bathymetric inversion, neural network–based uncertainty quantification, and result visualization. The core logic resides in 'method', while low‑level operations are implemented in the 'utls' utility set.
+# Laplace-HUQ
 
-├── data_plain # Abyssal plain data
-├── data_seamount # Seamount terrain data
-├── data_trench # Trench terrain data
-├── utls # General utility library (called by method)
-│ ├── distance # Distance calculation
-│ ├── longwave # Long‑wave gravity field separation (construct long‑wave matrix)
-│ ├── mat_interpolator# Matrix interpolation
-│ └── transform # Coordinate transformation (projection, geodetic conversion, etc.)
-├── method # Main script: GGM inversion + uncertainty quantification
-└── utls_plot # Visualization helpers (plotting based on utility results)
+**Heteroscedastic Uncertainty Quantification for GGM‑Derived Bathymetry**
+
+A spatially adaptive confidence interval estimation model based on the **zero‑mean Laplace distribution**. It quantifies heteroscedastic uncertainty in bathymetry obtained by the **Gravity‑Geologic Method (GGM)**, delivering reliable uncertainty bounds across different marine terrains (abyssal plains, seamounts, trenches).
+
+## Overview
+
+This codebase provides modular tools for marine terrain data processing, GGM inversion, neural‑based uncertainty quantification, and result visualisation.  
+The core logic resides in the `method/` directory, while low‑level operations are implemented as reusable utilities in `utls/`.
+
+## Key Features
+
+- **GGM bathymetric inversion** from gravity anomalies
+- **Zero‑mean Laplace distribution** modelling for heteroscedastic aleatoric uncertainty
+- **Spatially adaptive confidence intervals** that vary with local terrain complexity
+- Support for three typical seafloor morphologies:
+  - Abyssal plains
+  - Seamounts
+  - Oceanic trenches
+- Modular utilities for:
+  - Distance computation
+  - Long‑wave gravity field separation
+  - Matrix interpolation
+  - Coordinate transformation (projection, geodetic conversions)
+
+## Directory Structure
+
