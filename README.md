@@ -25,13 +25,16 @@ The core logic resides in the `method/` directory, while low‑level operations 
   - Coordinate transformation (projection, geodetic conversions)
 
 ## Directory Structure
-├── data_plain # Example data for abyssal plain areas
-├── data_seamount # Example data for seamount features
-├── data_trench # Example data for trench areas
-├── utls # General utility library (called by method/)
-│ ├── distance # Distance calculation
-│ ├── longwave # Long‑wave gravity field separation (construct long‑wave matrix)
-│ ├── mat_interpolator# Matrix interpolation routines
-│ └── transform # Coordinate transformation (projection, geodetic conversion, etc.)
-├── method # Main scripts: GGM inversion + uncertainty quantification
-└── utls_plot # Visualisation helpers (plotting based on utility results)
+
+```
+├── data_plain                 # Example data for abyssal plain areas
+├── data_seamount              # Example data for seamount features
+├── data_trench                # Example data for trench areas
+├── utls                       # General utility library (called by method/)
+│   ├── distance               # Distance calculation
+│   ├── longwave               # Long‑wave gravity field separation (construct long‑wave matrix)
+│   ├── mat_interpolator       # Matrix interpolation routines
+│   └── transform              # Coordinate transformation (projection, geodetic conversion, etc.)
+├── method                     # Main scripts: GGM inversion + uncertainty quantification
+└── utls_plot                  # Visualisation helpers (plotting based on utility results)
+```
